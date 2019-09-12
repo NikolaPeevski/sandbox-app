@@ -1,0 +1,78 @@
+<th scope="row">{{day.day ? day.day : ''}}</th>
+<td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td>
+  <span>
+    <input type="number"
+           class="form-control text-center timepicker-field"
+           placeholder="HH"
+           [value]="day.morning.start.hours"
+           (input)="emitChange($event.target.value, 0)"
+           maxlength="2">
+  </span>
+  <span>
+  <span>&nbsp;:&nbsp;</span>
+    <input type="number"
+           [value]="day.morning.start.minutes"
+           class="form-control text-center timepicker-field"
+           placeholder="MM"
+           (input)="emitChange($event.target.value, 1)"
+           maxlength="2">
+  </span>
+  <span>&nbsp;-&nbsp;</span>
+  <span>
+  <input type="number"
+         class="form-control text-center timepicker-field"
+         placeholder="HH"
+         [value]="day.morning.end.hours"
+         (input)="emitChange($event.target.value, 2)"
+         maxlength="2">
+  </span>
+  <span>
+  <span>&nbsp;:&nbsp;</span>
+    <input type="number"
+           [value]="day.morning.end.minutes"
+           class="form-control text-center timepicker-field"
+           placeholder="MM"
+           (input)="emitChange($event.target.value, 3)"
+           maxlength="2">
+  </span>
+</td>
+<td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td>
+
+  <span>
+    <input type="number"
+           class="form-control text-center timepicker-field"
+           placeholder="HH"
+           [value]="day.afternoon.start.hours"
+           (input)="emitChange($event.target.value, 4)"
+           maxlength="2">
+  </span>
+  <span>
+  <span>&nbsp;:&nbsp;</span>
+    <input type="number"
+           [value]="day.afternoon.start.minutes"
+           class="form-control text-center timepicker-field"
+           placeholder="MM"
+           (input)="emitChange($event.target.value, 5)"
+           maxlength="2">
+  </span>
+  <span>&nbsp;-&nbsp;</span>
+  <span>
+  <input type="number"
+         class="form-control text-center timepicker-field"
+         placeholder="HH"
+         [value]="day.afternoon.end.hours"
+         (input)="emitChange($event.target.value, 6)"
+         maxlength="2">
+  </span>
+  <span>
+  <span>&nbsp;:&nbsp;</span>
+    <input type="number"
+           [value]="day.afternoon.end.minutes"
+           class="form-control text-center timepicker-field"
+           placeholder="MM"
+           (input)="emitChange($event.target.value, 7)"
+           maxlength="2">
+  </span>
+</td>

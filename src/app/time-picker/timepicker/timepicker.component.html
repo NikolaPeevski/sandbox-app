@@ -1,1 +1,18 @@
-<p>timepicker works!</p>
+<div class="container">
+  <h4>Timepicker</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col"></th>
+        <th scope="col">Morning</th>
+        <th scope="col"></th>
+        <th scope="col">Afternoon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let day of week; let i = index" app-timepicker-day [day]="day" [index]="i" (emitter)="onHoursChanged($event.value, $event.index)">
+      </tr>
+    </tbody>
+  </table>
+</div>
